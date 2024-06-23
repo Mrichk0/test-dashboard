@@ -1,0 +1,32 @@
+.menu {
+  &-active {
+    border-radius: 8px;
+    background-color: var(--primary-color);
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 11px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #9197b3;
+    margin-bottom: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    &-active {
+      color: #fff;
+    }
+  }
+
+  &__icon {
+    margin-right: 14px;
+    stroke: var(--menu-icon-stroke);
+  }
+
+  &__icon-arrow {
+    margin-left: auto;
+  }
+}

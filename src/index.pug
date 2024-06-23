@@ -1,0 +1,185 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="dashboard facebook email ")
+    meta(name="keywords" content="dashboard, analytics, company, customers")
+    title Dashboard
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+    link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap")
+    link(rel="icon" type="image/svg+xml" href="./img/logo.svg")
+  body
+    .dashboard
+      aside.sidebar
+        a.sidebar__logo(href="/")
+          svg.sidebar__logo-icon(width="37", height="37")
+            use(href="./img/symbol-defs.svg#icon-logo")
+          .div  
+            | Dashboard
+            span.sidebar__logo-label v0.1  
+        nav.sidebar__menu.menu
+          ul.menu__list
+            li.menu__item
+              a.menu__link(href="#") 
+                svg.menu__icon.active(width="24", height="24")
+                  use(href="./img/symbol-defs.svg#icon-dushboard") 
+                | Dashboard   
+            li.menu__item
+              a.menu__link(href="#") 
+                svg.menu__icon(width="24", height="24")
+                  use(href="./img/symbol-defs.svg#icon-product" ) 
+                | Product   
+                svg.menu__icon-arrow.active(width="16", height="16")
+                  use(href="./img/symbol-defs.svg#icon-arrow-nav")
+            li.menu-active.menu__item
+              a.menu__link.menu__link-active(href="#") 
+                svg.menu__icon.active(width="24", height="24")
+                  use(href="./img/symbol-defs.svg#icon-customers") 
+                | Customers   
+                svg.menu__icon-arrow.active(width="16", height="16")
+                  use(href="./img/symbol-defs.svg#icon-chevron-right-white")
+            li.menu__item
+              a.menu__link(href="#") 
+                svg.menu__icon.active(width="24", height="24")
+                  use(href="./img/symbol-defs.svg#icon-income") 
+                | Income   
+                svg.menu__icon-arrow.active(width="16", height="16")
+                  use(href="./img/symbol-defs.svg#icon-arrow-nav")
+            li.menu__item
+              a.menu__link(href="#") 
+                svg.menu__icon.active(width="24", height="24")
+                  use(href="./img/symbol-defs.svg#icon-promote") 
+                | Promote   
+                svg.menu__icon-arrow.active(width="16", height="16")
+                  use(href="./img/symbol-defs.svg#icon-arrow-nav")
+            li.menu__item
+              a.menu__link(href="#") 
+                svg.menu__icon.active(width="24", height="24")
+                  use(href="./img/symbol-defs.svg#icon-help") 
+                | Help   
+                svg.menu__icon-arrow.active(width="16", height="16")
+                  use(href="./img/symbol-defs.svg#icon-arrow-nav")                          
+        .sidebar__user-profile.user-profile
+          img.user-profile__image(src="./img/man.png" alt="Evano")
+          .user-profile__details
+            .user-profile__name Evano
+            .user-profile__title Project Manager
+        button#sidebar-toggle 
+      main.content
+        header.content__header
+          h1.content__title Hello Evano 👋
+        section.content__section.customers
+          .customers__header
+            .customers__blok
+              h2.customers__title All Customers
+              h3.customers__title-secondary Active Members 
+            form.form
+              input.form__input(type="text", placeholder="Search ")
+              svg.form__icon(width="24", height="24")
+                use(href="./img/symbol-defs.svg#icon-zoom")
+          .customers__table-wrapper
+            table.customers__table
+              thead
+                tr
+                  th Customer Name
+                  th Company
+                  th Phone Number
+                  th Email
+                  th Country
+                  th Status
+              tbody
+                tr
+                  td Jane Cooper
+                  td Microsoft
+                  td (225) 555-0118
+                  td jane@microsoft.com
+                  td United States
+                  td
+                    .customers__status--active.customers__status Active
+                tr
+                  td Floyd Miles
+                  td Yahoo
+                  td (205) 555-0100
+                  td floyd@yahoo.com
+                  td Kiribati
+                  td
+                    .customers__status--inactive.customers__status Inactive
+                tr
+                  td Ronald Richards
+                  td Adobe
+                  td (302) 555-0107
+                  td ronald@adobe.com 
+                  td Israel
+                  td
+                    .customers__status.customers__status--inactive Inactive
+                tr
+                  td Marvin McKinney
+                  td Tesla
+                  td (252) 555-0126
+                  td marvin@tesla.com
+                  td Iran
+                  td 
+                    .customers__status--active.customers__status Active  
+                tr
+                  td Jerome Bell
+                  td Google
+                  td (629) 555-0129
+                  td jerome@google.com
+                  td Réunion
+                  td
+                    .customers__status.customers__status--active Active
+                tr
+                  td Kathryn Murphy
+                  td Microsoft
+                  td (406) 555-0120
+                  td kathryn@microsoft.com
+                  td Curaçao
+                  td
+                    .customers__status.customers__status--active Active
+                tr
+                  td Jacob Jones
+                  td Yahoo
+                  td (208) 555-0112
+                  td jacob@yahoo.com
+                  td Brazil
+                  td
+                    .customers__status.customers__status--active Active
+                tr
+                  td Kristin Watson
+                  td Facebook
+                  td (704) 555-0127
+                  td kristin@facebook.com
+                  td Åland Islands
+                  td
+                    .customers__status.customers__status--inactive Inactive
+          .pagination
+            span.pagination__info Showing data 1 to 8 of 256K entries
+            ul.pagination__list
+              li
+                button.pagination__btn.pagination__btn--arrow 
+                  | &#10094;  
+              li
+                button.pagination__btn.pagination__btn--active
+                  | 1
+              li
+                button.pagination__btn 
+                  | 2
+              li
+                button.pagination__btn 
+                  | 3
+              li
+                button.pagination__btn 
+                  | 4
+              li
+                .pagination__dots
+                  | ... 
+              li
+                button.pagination__btn 
+                  | 40 
+              li
+                button.pagination__btn.pagination__btn--arrow  
+                  | &#10095;
+    .backdrop              
+    script(src="js/main.js")
